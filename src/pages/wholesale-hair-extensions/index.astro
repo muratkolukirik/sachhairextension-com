@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+import { CATEGORIES } from '../../data/site';
+
+const title = 'Wholesale Hair Extensions';
+const description =
+  'Wholesale human hair extensions from Sach & Vogue Hair — manufacturer-direct supply for salons and distributors, with 141-colour consistency, custom matching, and DHL Express shipping.';
+const breadcrumbs = [
+  { label: 'Professional Salon Supply', href: '/professional-salon-supply/' },
+  { label: 'Wholesale Hair Extensions' },
+];
+---
+
+<BaseLayout {title} {description} path="/wholesale-hair-extensions/" {breadcrumbs}>
+  <section class="page-intro">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Wholesale hair extensions</h1>
+      <p class="section__lead">
+        Manufacturer-direct wholesale supply for professional salons and distributors — built on batch consistency, colour control, and ordering logic that respects how extension work actually happens in the salon.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container article-body">
+      <div class="prose">
+        <p>Sach &amp; Vogue Hair supplies wholesale human hair extensions to professional clients internationally. We are a manufacturer, not a retail marketplace. Wholesale relationships are structured around repeatable quality: the same shade logic, the same construction standards, and the same communication on production and dispatch.</p>
+
+        <h2>Wholesale is not retail-only supply</h2>
+        <p>Salons and distributors ordering wholesale need products that integrate with installation methods, maintenance cycles, and colour consultation — not consumer clip-in packs alone. Our wholesale lines cover the full professional spectrum:</p>
+        <ul>
+          <li>Tape-In Hair Extensions for row-based salon work</li>
+          <li>Keratin Tip Hair Extensions for strand-by-strand precision</li>
+          <li>Weft Hair Extensions for sew-in and beaded applications</li>
+          <li>Clip-In Hair Extensions as removable professional sets</li>
+          <li>Women Topper pieces for targeted volume and coverage</li>
+        </ul>
+
+        <ManufacturerNote title="Consistency matters more than price alone">
+          <p>Wholesale clients who chase the lowest gram price without assessing construction, colour stability, and reorder reliability often spend more correcting installs, replacing shed bonds, and re-matching shades. We manufacture for professionals who measure value across the full service lifecycle.</p>
+        </ManufacturerNote>
+
+        <h2>Professional ordering logic</h2>
+        <p>Wholesale accounts typically order by method, shade code, length, texture, and pack structure. We support colour ring reference, daylight photo matching, and documented reorder specifications. International orders ship via DHL Express once production is complete, with clear timelines communicated before manufacturing begins.</p>
+
+        <h2>Categories available for wholesale</h2>
+        <div class="card-grid">
+          {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
+            <article class="card">
+              <h3 class="card__title"><a href={href}>{catTitle}</a></h3>
+              <p class="card__text">{catDesc}</p>
+              <a href={href} class="text-link">View category</a>
+            </article>
+          ))}
+        </div>
+
+        <h2>Colour ring and custom matching</h2>
+        <p>Our 141-colour system spans natural bases, ash and warm blondes, rooted tones, balayage, ombré, and highlight formats. When a client falls between catalogue shades, custom colour matching is available. See the <a href="/hair-extension-colours-colour-code-guide/">Colour Code Guide</a> for professional shade logic.</p>
+
+        <h2>Related wholesale pages</h2>
+        <p class="link-group">
+          <a href="/wholesale-weft-hair-extensions/" class="text-link">Wholesale weft hair extensions</a>
+          <span class="link-group__sep" aria-hidden="true">·</span>
+          <a href="/private-label-hair-extensions/" class="text-link">Private label manufacturing</a>
+          <span class="link-group__sep" aria-hidden="true">·</span>
+          <a href="/professional-salon-supply/" class="text-link">Professional salon supply</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <ConsultationCTA
+    heading="Open a wholesale account"
+    text="Tell us your salon or distribution model, preferred methods, and approximate volume. We will advise on structure and colour planning."
+  />
+</BaseLayout>

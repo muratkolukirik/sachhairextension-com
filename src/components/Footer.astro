@@ -1,5 +1,5 @@
 ---
-import { SITE, CATEGORIES, NAV } from '../data/site';
+import { SITE, CATEGORIES, NAV, WHOLESALE, GUIDES } from '../data/site';
 ---
 
 <footer class="footer">
@@ -9,7 +9,7 @@ import { SITE, CATEGORIES, NAV } from '../data/site';
       <div class="footer__brand">
         <p class="footer__name">{SITE.name}</p>
         <p class="footer__text">
-          Premium human hair extensions manufacturer in {SITE.location}. Bulk hair systems, colour expertise, and international delivery for professional salons.
+          Premium human hair extensions manufacturer in {SITE.location}. Bulk hair production, 141-colour pigment work, private label capability, and international salon supply.
         </p>
       </div>
 
@@ -17,7 +17,6 @@ import { SITE, CATEGORIES, NAV } from '../data/site';
         <p class="footer__heading">Explore</p>
         <ul class="footer__links">
           {NAV.map(({ label, href }) => (<li><a href={href}>{label}</a></li>))}
-          <li><a href="/hair-extension-weight-guide/">Weight Guide</a></li>
         </ul>
       </div>
 
@@ -25,6 +24,20 @@ import { SITE, CATEGORIES, NAV } from '../data/site';
         <p class="footer__heading">Categories</p>
         <ul class="footer__links">
           {CATEGORIES.map(({ title, href }) => (<li><a href={href}>{title}</a></li>))}
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__heading">Wholesale</p>
+        <ul class="footer__links">
+          {WHOLESALE.map(({ label, href }) => (<li><a href={href}>{label}</a></li>))}
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__heading">Manufacturer Guides</p>
+        <ul class="footer__links">
+          {GUIDES.map(({ label, href }) => (<li><a href={href}>{label}</a></li>))}
         </ul>
       </div>
 
@@ -63,8 +76,8 @@ import { SITE, CATEGORIES, NAV } from '../data/site';
 
   .footer__grid {
     display: grid;
-    gap: clamp(2rem, 5vw, 3.5rem);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: clamp(2rem, 5vw, 3rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
     padding-bottom: clamp(2.5rem, 6vw, 4rem);
   }
 

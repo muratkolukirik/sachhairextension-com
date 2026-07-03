@@ -8,15 +8,15 @@ interface Props {
 }
 
 const {
-  heading = 'Speak with our team',
-  text = 'Share your salon requirements, preferred extension method, or colour brief. We respond via WhatsApp during business hours.',
+  heading = 'Professional consultation',
+  text = 'Speak with our production team about methods, colour, weight, and ordering structure.',
   button = 'Contact via WhatsApp',
 } = Astro.props;
 ---
 
-<section class="section section--compact cta-band">
-  <div class="container cta-band__inner">
-    <span class="section__eyebrow">Enquiries</span>
+<section class="consultation-cta">
+  <div class="container consultation-cta__inner">
+    <span class="section__eyebrow">Consultation</span>
     <h2>{heading}</h2>
     <p>{text}</p>
     <a href={SITE.whatsapp} class="btn btn--soft" target="_blank" rel="noopener noreferrer">{button}</a>

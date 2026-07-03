@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTASection from '../../components/CTASection.astro';
-import { CATEGORIES } from '../../data/site';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+import { CATEGORIES, GUIDES, WHOLESALE } from '../../data/site';
 
 const title = 'Human Hair Extensions for Salons';
 const description =
-  'An overview of human hair extension systems manufactured by Sach & Vogue Hair — tape-in, keratin tip, weft, and clip-in options for professional stylists.';
+  'Human hair extension systems manufactured by Sach & Vogue Hair — tape-in, keratin tip, weft, clip-in, topper, wholesale supply, private label, and 141-colour expertise.';
 const breadcrumbs = [{ label: 'Hair Extensions', href: '/hair-extensions/' }];
 ---
 
@@ -16,17 +16,18 @@ const breadcrumbs = [{ label: 'Hair Extensions', href: '/hair-extensions/' }];
       <Breadcrumbs items={breadcrumbs} />
       <h1>Human hair extensions for professional salons</h1>
       <p class="section__lead">
-        Four manufacturing lines developed for salon installation, consistent reordering, and natural movement.
+        Manufacturer-direct extension systems from sorted bulk human hair — Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper — with 141-colour pigment work and international salon supply.
       </p>
     </div>
   </section>
 
   <section class="section section--compact">
-    <div class="container">
+    <div class="container article-body--wide">
       <div class="prose">
-        <p>Sach & Vogue Hair manufactures extension systems from bulk human hair for stylists who need predictable quality across reorders. Rather than sourcing finished goods from third parties, we control production at our Fethiye / Ölüdeniz facility — from weft construction and bond application to colour processing and final inspection.</p>
-        <p>Choosing the right method depends on your client's hair density, lifestyle, and maintenance preferences. Each page below explains how the system is built, typical salon applications, and what to consider when specifying length and weight.</p>
+        <p>Sach &amp; Vogue Hair manufactures extension systems for stylists who need predictable quality across reorders. We control production at our Fethiye / Ölüdeniz facility — bulk hair selection, sorting, pigment-based colouring, method-specific construction, and quality review — rather than repackaging third-party goods.</p>
+        <p>Choosing the right method depends on client density, lifestyle, maintenance preferences, and consultation depth. Each category below explains manufacturing logic, salon applications, and ordering considerations.</p>
       </div>
+
       <div class="card-grid">
         {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
           <article class="card">
@@ -36,16 +37,28 @@ const breadcrumbs = [{ label: 'Hair Extensions', href: '/hair-extensions/' }];
           </article>
         ))}
       </div>
+
       <div class="prose prose--follow">
         <h2>Women Topper pieces</h2>
-        <p>For clients who need targeted volume or coverage rather than a full extension install, we produce Women Topper units in complementary shades from our 141-colour range. Topper work pairs naturally with our custom colour matching service when a seamless blend with existing hair is essential.</p>
-        <p class="link-group">
-          <a href="/hair-extension-colours/" class="text-link">Colour &amp; matching</a>
-          <span class="link-group__sep" aria-hidden="true">·</span>
-          <a href="/hair-extension-weight-guide/" class="text-link">Weight guide</a>
-        </p>
+        <p>For clients who need targeted volume or coverage rather than a full extension install, we produce Women Topper units in complementary shades from our 141-colour range — with the same pigment discipline applied across all lines.</p>
+
+        <h2>Wholesale &amp; private label</h2>
+        <p>Salons, distributors, and boutique brands source manufacturer-direct through our wholesale and private label programmes:</p>
+        <ul class="topic-list">
+          {WHOLESALE.map(({ label, href }) => (
+            <li><a href={href}><strong>{label}</strong></a></li>
+          ))}
+        </ul>
+
+        <h2>Manufacturer guides</h2>
+        <ul class="topic-list">
+          {GUIDES.map(({ label, href }) => (
+            <li><a href={href}><strong>{label}</strong></a></li>
+          ))}
+        </ul>
       </div>
     </div>
   </section>
-  <CTASection heading="Discuss your salon range" text="Tell us which methods you install most often and we will recommend suitable lengths, weights, and colour formats." />
+
+  <ConsultationCTA heading="Discuss your salon range" text="Tell us which methods you install most often and we will recommend lengths, weights, shades, and supply structure." />
 </BaseLayout>

@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+
+const title = 'Hair Extensions Training';
+const description =
+  'Professional hair extensions training from Sach & Vogue Hair and The Extensions Academy — tape-in, keratin, weft, colour matching, and consultation for salons and stylists.';
+const breadcrumbs = [{ label: 'Hair Extensions Training' }];
+---
+
+<BaseLayout {title} {description} path="/hair-extensions-training/" {breadcrumbs}>
+  <section class="page-intro">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Professional hair extensions training</h1>
+      <p class="section__lead">
+        Application skill matters as much as the hair itself. Sach &amp; Vogue Hair supports professional education through The Extensions Academy — training designed for salons, stylists, and educators who install and consult on extension work daily.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container article-body">
+      <div class="prose">
+        <p>Extension results depend on two foundations: the quality of the manufactured hair system and the professional who plans, installs, maintains, and removes it. Our training programmes connect product knowledge with practical salon logic — because even premium bulk hair can underperform when method, weight, placement, or colour consultation is wrong.</p>
+
+        <h2>Who training is for</h2>
+        <ul class="topic-list">
+          <li><strong>Salon owners</strong> — building or refining an extension service menu with manufacturer-backed product knowledge.</li>
+          <li><strong>Working stylists</strong> — expanding from cutting and colour into extension installation and maintenance.</li>
+          <li><strong>Educators and trainers</strong> — aligning teaching content with current construction and colour standards.</li>
+          <li><strong>Distributor teams</strong> — supporting salon clients with credible technical guidance.</li>
+        </ul>
+
+        <h2>Methods covered</h2>
+        <ul>
+          <li><strong>Tape-In Hair Extensions</strong> — sectioning, placement, re-taping, and invisible-looking row logic</li>
+          <li><strong>Keratin Tip Hair Extensions</strong> — bond formats, strand weight, micro-application, and safe removal</li>
+          <li><strong>Weft Hair Extensions</strong> — row planning, weight distribution, and construction-aware cutting</li>
+          <li><strong>Colour matching</strong> — 141-colour logic, daylight assessment, and consultation structure</li>
+          <li><strong>Client consultation</strong> — density, haircut, target length, maintenance, and expectation management</li>
+          <li><strong>Removal and maintenance</strong> — protecting natural hair and preserving extension longevity</li>
+        </ul>
+
+        <ManufacturerNote title="Professional application is not optional">
+          <p>Keratin tips, tape rows, and weft installs each carry distinct tension, placement, and maintenance requirements. Training exists because extension work is a technical service — not a product attachment. Short-hair transformations are not simple gram-based applications; they are custom transformation projects.</p>
+        </ManufacturerNote>
+
+        <h2>The Extensions Academy</h2>
+        <p>Training is delivered under The Extensions Academy, connected to Sach &amp; Vogue Hair manufacturing knowledge. Programmes focus on completion-based professional development — participants receive a certificate of completion for the modules undertaken. We do not claim government accreditation or official diploma status unless explicitly stated for a specific programme at the time of enrolment.</p>
+
+        <h2>Why manufacturer-led training differs</h2>
+        <p>Generic extension courses often treat hair as a commodity. Our training reflects how we actually produce: pigment-based colour batches, method-specific construction, strand and row weight logic, and reorder consistency. Stylists learn to specify orders correctly and consult clients with manufacturer-realistic expectations.</p>
+
+        <p>Related: <a href="/hair-extension-colours-colour-code-guide/">Colour Code Guide</a> · <a href="/hair-extension-weight-guide/">Weight Guide</a> · <a href="/the-dna-of-sach-hair-extensions/">The DNA of Sach Hair Extensions</a></p>
+      </div>
+    </div>
+  </section>
+
+  <ConsultationCTA
+    heading="Training availability"
+    text="Message us on WhatsApp with your salon location, experience level, and the methods you wish to learn. We will share current programme options and schedules."
+    button="WhatsApp for training availability"
+  />
+</BaseLayout>

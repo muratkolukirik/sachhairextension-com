@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
 import CTASection from '../../components/CTASection.astro';
 
-const title = 'Keratin Tip Hair Extensions';
+const title = 'Keratin Tip Hair Extensions Manufacturing';
 const description =
-  'Keratin Tip Hair Extensions from Sach & Vogue Hair — pre-bonded strand extensions for precise, long-lasting salon installs using bulk human hair.';
+  'Keratin tip hair extensions from Sach & Vogue Hair — Flat, U, V, and I tips, Italian keratin bonds, strand weight logic, and professional application requirements.';
 const breadcrumbs = [
   { label: 'Hair Extensions', href: '/hair-extensions/' },
   { label: 'Keratin Tip Hair Extensions' },
@@ -16,25 +17,49 @@ const breadcrumbs = [
   <section class="page-intro">
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>Keratin Tip Hair Extensions</h1>
+      <h1>Keratin tip hair extensions manufacturing</h1>
+      <p class="section__lead">
+        Pre-bonded strand extensions in Flat, U, V, and I tip formats — manufactured with Italian keratin bonds, controlled strand weight, and the professional application standards this method demands.
+      </p>
     </div>
   </section>
+
   <section class="section section--compact">
-    <div class="container">
+    <div class="container article-body">
       <div class="prose">
-        <p>Keratin Tip Hair Extensions — sometimes referred to as pre-bonded or fusion tips — allow strand-by-strand placement for stylists who need precise control over direction, density, and blend. Sach & Vogue Hair manufactures keratin bonds in several tip formats to suit micro-ring, fusion, and heat-application workflows.</p>
-        <h2>Manufacturing quality</h2>
-        <p>We use bulk human hair with intact cuticles, processed to match the movement and sheen of natural hair. Keratin bonds are applied in a controlled environment to ensure uniform tip size and secure attachment to each strand. Batch testing helps maintain bond strength and shade consistency across large salon orders.</p>
-        <h2>When keratin tips suit your client</h2>
-        <ul>
-          <li>Fine hair where flat wefts would be visible</li>
-          <li>Detailed blending around the hairline and parting</li>
-          <li>Clients who prefer a long-wear method with scheduled maintenance</li>
+        <p>Keratin Tip Hair Extensions — pre-bonded or fusion tips — allow strand-by-strand placement for stylists who need precise control over direction, density, and blend. Sach &amp; Vogue Hair manufactures keratin bonds in multiple tip formats to suit micro-ring, fusion, and heat-application workflows used in professional salons worldwide.</p>
+
+        <h2>Tip formats we manufacture</h2>
+        <ul class="topic-list">
+          <li><strong>Flat tips</strong> — low-profile bonds for natural lie against the scalp.</li>
+          <li><strong>U tips</strong> — versatile format for fusion and ring-based methods.</li>
+          <li><strong>V tips</strong> — fine directional placement for detailed blending.</li>
+          <li><strong>I tips</strong> — cylindrical bonds for specific micro and nano workflows.</li>
         </ul>
+
+        <h2>Italian keratin and bond quality</h2>
+        <p>Bonds are formed with Italian keratin specified for professional extension work — uniform tip size, secure attachment to each strand, and behaviour that supports scheduled maintenance and safe removal when stylists follow correct protocol.</p>
+
+        <h2>Strand weight logic</h2>
+        <p>Keratin work is planned in strands and grams together. Fine hair requires fewer strands with wider spacing to avoid overload at bond points. Coarse hair may carry more strands but still needs directional planning at the hairline and parting. Our team advises wholesale and salon clients on strand counts alongside shade and length.</p>
+
+        <ManufacturerNote title="Microcapsule and fine hair logic">
+          <p>Fine-haired clients are not candidates for maximum strand density. Micro-application logic — bond size, placement spacing, and strand weight — protects natural hair and creates believable movement. Keratin tips reward disciplined consultation, not volume-for-volume ordering.</p>
+        </ManufacturerNote>
+
+        <h2>Why keratin tips require professional application</h2>
+        <p>Bond placement, heat control, isolation, and removal technique directly affect client safety and result longevity. This method should not be sold or installed without training. Our <a href="/hair-extensions-training/">Hair Extensions Training</a> programmes cover keratin installation, maintenance, and removal logic.</p>
+
+        <h2>Short hair and transformation projects</h2>
+        <p class="pull-quote">Short-hair transformations are not simple gram-based applications; they are custom transformation projects.</p>
+        <p>When the client&apos;s current length is short and the target is dramatically longer, planning must account for blend zones, bond visibility, growth patterns, and multi-visit structure — not a standard gram chart alone.</p>
+
         <h2>Colour range</h2>
-        <p>All keratin tip orders draw from our 141-colour catalogue. Custom colour matching is available for complex multi-tone blends. We can also coordinate keratin work with <a href="/weft-hair-extensions/">Weft Hair Extensions</a> when a hybrid install is planned.</p>
+        <p>All keratin tip orders draw from our 141-colour catalogue with custom matching for multi-tone blends. Coordinate with <a href="/weft-hair-extensions/">Weft Hair Extensions</a> when hybrid installs combine row and strand work.</p>
+
+        <p>Related: <a href="/tape-in-hair-extensions/">Tape-In Hair Extensions</a> · <a href="/hair-extension-weight-guide/">Weight Guide</a></p>
       </div>
     </div>
   </section>
-  <CTASection />
+  <CTASection heading="Keratin tip enquiry" text="Specify tip format, strand weight targets, shades, and length for production guidance." />
 </BaseLayout>

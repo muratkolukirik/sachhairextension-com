@@ -1,0 +1,18 @@
+---
+import { SITE } from '../data/site';
+
+interface Props {
+  label?: string;
+  title: string;
+}
+
+const { label = 'Manufacturer note', title } = Astro.props;
+---
+
+<aside class="manufacturer-note" aria-label="Manufacturer note">
+  <p class="manufacturer-note__label">{label}</p>
+  <p class="manufacturer-note__title">{title}</p>
+  <div class="manufacturer-note__body">
+    <slot />
+  </div>
+</aside>

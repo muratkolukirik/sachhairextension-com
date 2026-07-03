@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTASection from '../../components/CTASection.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
 
-const title = 'Hair Extension Weight Guide';
+const title = 'Hair Extension Weight Guide for Professionals';
 const description =
-  'A practical guide to hair extension weights for salon professionals — how grams per pack relate to install size, method, and client hair density.';
+  'Expert hair extension weight guide from Sach & Vogue Hair — grams, density, method, placement, labour, and why pricing should never be calculated by weight alone.';
 const breadcrumbs = [{ label: 'Weight Guide' }];
 ---
 
@@ -14,35 +15,70 @@ const breadcrumbs = [{ label: 'Weight Guide' }];
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
       <h1>Hair extension weight guide</h1>
+      <p class="section__lead">
+        Grams alone are not enough. Professional extension planning requires density, haircut, target length, method, strand weight, placement strategy, and labour time — especially for complex transformations.
+      </p>
     </div>
   </section>
+
   <section class="section section--compact">
-    <div class="container">
+    <div class="container article-body">
       <div class="prose">
-        <p>Extension weight affects comfort, blend quality, and the long-term health of a client's natural hair. This guide outlines practical starting points for salon professionals ordering from Sach & Vogue Hair. Exact requirements vary by hair density, length goal, and method — use these ranges as a baseline and adjust with our team when needed.</p>
-        <h2>Why weight matters</h2>
-        <p>Too little hair produces a flat result; too much adds tension on the natural hair and can shorten wear time. Matching weight to density is especially important for keratin tip and sew-in weft work where load is concentrated on small sections.</p>
+        <p>This guide is written for stylists, salon owners, and wholesale clients who specify extension orders. Weight is a starting variable — not the definition of the service. Used incorrectly, gram charts create overloaded natural hair, visible wefts, bond stress, and client dissatisfaction.</p>
+
+        <blockquote class="pull-quote">
+          Hair extension pricing should never be calculated only by grams. The client&apos;s natural hair density, current haircut, target length, application method, strand weight, placement strategy and labour time all affect the final result and the true cost of the service.
+        </blockquote>
+
+        <h2>Why grams alone fail</h2>
+        <ul class="topic-list">
+          <li><strong>Hair density</strong> — fine hair tolerates less weight; coarse hair may need more spread, not more bulk at one row.</li>
+          <li><strong>Current haircut</strong> — layers, blunt lines, and short perimeter affect blend strategy.</li>
+          <li><strong>Target length</strong> — longer extensions increase leverage on the natural hair anchor points.</li>
+          <li><strong>Method</strong> — tape distributes differently from keratin strands or sew-in wefts.</li>
+          <li><strong>Strand weight</strong> — keratin tips are planned per bond, not only per pack gram total.</li>
+          <li><strong>Placement strategy</strong> — row depth and spacing determine comfort and visibility.</li>
+          <li><strong>Labour time</strong> — complex plans require more consultation, installation, and finishing.</li>
+        </ul>
+
         <h2>General ranges by install type</h2>
         <ul>
           <li><strong>Partial volume (temples &amp; crown)</strong> — often 50–80 g depending on method and desired lift.</li>
-          <li><strong>Medium full-head</strong> — commonly 100–150 g for average density, adjusted up for coarse hair.</li>
-          <li><strong>Full transformation</strong> — frequently 150–200+ g when adding significant length and density; fine hair may need a staged install.</li>
-          <li><strong>Clip-In sets</strong> — typically 80–120 g total across pieces for a complete set, cut to suit the client's layers.</li>
+          <li><strong>Medium full-head</strong> — commonly 100–150 g for average density, adjusted for coarse or fine hair.</li>
+          <li><strong>Full transformation</strong> — frequently 150–200+ g when adding significant length and density; fine hair may need staged installs.</li>
+          <li><strong>Clip-In sets</strong> — typically 80–120 g total across pieces, cut to suit layers.</li>
         </ul>
+
         <h2>Method-specific notes</h2>
         <h3>Tape-In Hair Extensions</h3>
-        <p>Weight is distributed across multiple wefts. Stylists often work in packs; we can advise pack counts based on row plans and target grams.</p>
+        <p>Weight distributes across multiple wefts and row depths. Specify pack counts with row plans — 2 cm butterfly, 3 cm classic, and 4 cm regular widths change sectioning math.</p>
+
         <h3>Keratin Tip Hair Extensions</h3>
-        <p>Strand counts translate to grams. Fine hair usually needs fewer strands placed with wider spacing to avoid overload at the bond points.</p>
+        <p>Strand counts and bond spacing define the install. Fine hair needs micro logic; short-hair transformations are custom projects, not gram-table lookups.</p>
+
         <h3>Weft Hair Extensions</h3>
-        <p>Row count and weft width determine total weight. Hand-tied wefts carry less bulk per centimetre than machine wefts — factor this into density planning.</p>
+        <p>Row count, weft width, and stitch density affect perceived weight. Machine wefts carry different bulk than hand-tied formats — see <a href="/wholesale-weft-hair-extensions/">Wholesale Weft Hair Extensions</a>.</p>
+
         <h3>Women Topper</h3>
-        <p>Topper base size and hair length drive weight more than a standard weft install. Prioritise perimeter blend and parting coverage over maximum grams.</p>
+        <p>Base size, parting coverage, and perimeter blend drive specification more than maximum grams.</p>
+
+        <ManufacturerNote title="Full head planning">
+          <p>A full head is not one number — it is a map. Document zones (crown, parietal, occipital, face-frame), method per zone if hybrid, and maintenance expectations before ordering from the manufacturer.</p>
+        </ManufacturerNote>
+
+        <h2>Short hair transformation complexity</h2>
+        <p>When natural hair is short and the target is long, weight must be introduced gradually with blend zones and often multi-visit structure. Ordering maximum grams for a single session on fine short hair is a common failure pattern.</p>
+
         <h2>Ordering with confidence</h2>
-        <p>When placing an order, share your client's natural density, current length, target length, and chosen method. Our production team will suggest an appropriate weight or pack configuration before manufacturing begins.</p>
-        <p>Related: <a href="/hair-extensions/">Extension categories</a> · <a href="/professional-salon-supply/">Salon supply</a></p>
+        <p>When placing a manufacturing order, share density assessment, current length, target length, method, and any hybrid plan. Our production team recommends weight ranges and pack structures before manufacturing begins.</p>
+
+        <p>Related: <a href="/hair-extensions/">Extension categories</a> · <a href="/hair-extensions-training/">Professional training</a> · <a href="/professional-salon-supply/">Salon supply</a></p>
       </div>
     </div>
   </section>
-  <CTASection heading="Unsure about weight?" text="WhatsApp us with method, target length, and a brief on your client's hair type — we will recommend a starting range." />
+
+  <ConsultationCTA
+    heading="Weight specification support"
+    text="WhatsApp us with method, target length, and a brief on your client's hair type — we will recommend a starting range."
+  />
 </BaseLayout>

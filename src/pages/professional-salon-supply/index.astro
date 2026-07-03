@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTASection from '../../components/CTASection.astro';
-import { SITE } from '../../data/site';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+import { SITE, CATEGORIES } from '../../data/site';
 
-const title = 'Professional Salon Supply';
+const title = 'Professional Salon Supply & Wholesale';
 const description =
-  'Manufacturer-direct salon supply from Sach & Vogue Hair — bulk human hair extensions, consistent reordering, DHL Express shipping, and technical support for professional clients.';
+  'Professional salon supply from Sach & Vogue Hair — manufacturer-direct wholesale, private label capability, 141-colour consistency, training support, and DHL Express international shipping.';
 const breadcrumbs = [{ label: 'Professional Salon Supply' }];
 ---
 
@@ -15,27 +16,68 @@ const breadcrumbs = [{ label: 'Professional Salon Supply' }];
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
       <h1>Professional salon supply</h1>
-      <p class="section__lead">Manufacturer-direct supply for salons, stylists, and distributors who need consistent bulk hair production.</p>
+      <p class="section__lead">
+        Manufacturer-direct supply for salons, stylists, and distributors — built on bulk hair production discipline, not retail-only trading.
+      </p>
     </div>
   </section>
+
   <section class="section section--compact">
-    <div class="container">
+    <div class="container article-body">
       <div class="prose">
-        <p>Sach & Vogue Hair works directly with salons, stylists, and distributors who need a dependable manufacturing partner — not a marketplace of inconsistent sources. Based in Fethiye / Ölüdeniz, we produce extension systems from bulk human hair and ship internationally to qualified professional accounts.</p>
+        <p>Sach &amp; Vogue Hair works directly with professional clients who need a dependable manufacturing partner. Based in Fethiye / Ölüdeniz, we produce extension systems from sorted bulk human hair and ship internationally to qualified salon and wholesale accounts via DHL Express.</p>
+
         <h2>What professional clients receive</h2>
         <ul class="feature-list">
-          <li>Direct access to our manufacturing lines: Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper</li>
-          <li>141-colour catalogue with custom matching when standard shades are not enough</li>
-          <li>Batch consistency designed to simplify reorders and client maintenance</li>
-          <li>International dispatch via DHL Express with clear production timelines</li>
-          <li>Guidance on weight, length, and method selection from our production team</li>
+          <li>Direct access to Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper manufacturing lines</li>
+          <li>141-colour pigment system with custom matching and colour ring consultation</li>
+          <li>Batch consistency designed for reorder stability and client maintenance</li>
+          <li>Private label manufacturing for boutique brands and salon house lines</li>
+          <li>Training support through The Extensions Academy for application excellence</li>
+          <li>Technical guidance on weight, length, method, and placement strategy</li>
         </ul>
+
+        <ManufacturerNote title="Manufacturer-direct, not marketplace supply">
+          <p>We are a production house — not a directory of inconsistent traders. Professional supply relationships include documented shade codes, construction specifications, and communication on lead times before manufacturing starts.</p>
+        </ManufacturerNote>
+
+        <h2>Wholesale and private label pathways</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3 class="card__title"><a href="/wholesale-hair-extensions/">Wholesale Hair Extensions</a></h3>
+            <p class="card__text">Manufacturer-direct wholesale for salons and distributors who need consistency across reorders — not lowest gram price alone.</p>
+            <a href="/wholesale-hair-extensions/" class="text-link">Wholesale overview</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title"><a href="/private-label-hair-extensions/">Private Label Manufacturing</a></h3>
+            <p class="card__text">Brand-ready extension lines with colour control, method options, and packaging consultation for professional brands.</p>
+            <a href="/private-label-hair-extensions/" class="text-link">Private label</a>
+          </article>
+          <article class="card">
+            <h3 class="card__title"><a href="/wholesale-weft-hair-extensions/">Wholesale Weft Extensions</a></h3>
+            <p class="card__text">Machine weft supply with construction-focused quality — stitch density, track stability, and shade batching.</p>
+            <a href="/wholesale-weft-hair-extensions/" class="text-link">Wholesale weft</a>
+          </article>
+        </div>
+
+        <h2>Extension categories</h2>
+        <div class="card-grid">
+          {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
+            <article class="card">
+              <h3 class="card__title"><a href={href}>{catTitle}</a></h3>
+              <p class="card__text">{catDesc}</p>
+              <a href={href} class="text-link">View category</a>
+            </article>
+          ))}
+        </div>
+
         <h2>Who we supply</h2>
-        <p>We focus on professional users — independent stylists, salon groups, and regional distributors serving the beauty trade. If you are building a new extension menu or switching suppliers, we can walk through category fit, typical order structures, and colour planning before your first production run.</p>
+        <p>Independent stylists, salon groups, regional distributors, and boutique hair brands building extension services. If you are launching a new menu or changing suppliers, we walk through category fit, colour planning, and ordering structure before your first production run.</p>
+
         <h2>Getting started</h2>
-        <p>Reach out with your salon name, location, the methods you install, and approximate monthly volume. We will respond via WhatsApp or phone to discuss account setup and sample options where appropriate.</p>
-        <p>Explore our categories: <a href="/hair-extensions/">Hair Extensions overview</a> · <a href="/hair-extension-weight-guide/">Weight guide</a></p>
+        <p>Reach out with your salon or company name, location, installed methods, and approximate monthly volume. We respond via WhatsApp or phone to discuss account setup. Read <a href="/the-dna-of-sach-hair-extensions/">The DNA of Sach Hair Extensions</a> to understand our manufacturing philosophy.</p>
       </div>
+
       <div class="contact-card">
         <dl>
           <dt>WhatsApp</dt>
@@ -46,5 +88,6 @@ const breadcrumbs = [{ label: 'Professional Salon Supply' }];
       </div>
     </div>
   </section>
-  <CTASection heading="Open a professional account" text="Message us on WhatsApp with your salon details and preferred extension methods." />
+
+  <ConsultationCTA heading="Open a professional account" text="Message us with your salon details, preferred methods, and distribution model." />
 </BaseLayout>
