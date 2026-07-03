@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const title = 'Hair Extension Colours';
+const description =
+  '141 hair extension colours from Sach & Vogue Hair — natural bases, rooted tones, balayage blends, and custom colour matching for professional salons.';
+const breadcrumbs = [{ label: 'Hair Extension Colours' }];
+---
+
+<BaseLayout {title} {description} path="/hair-extension-colours/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Hair extension colours</h1>
+      <div class="prose">
+        <p>Colour consistency is central to professional extension work. Sach & Vogue Hair maintains a structured library of 141 shades spanning natural bases, cool and warm undertones, rooted formats, balayage blends, and select fashion tones. Because we manufacture in-house, shade batches are tracked to support reliable reorders.</p>
+        <h2>How our colour library is organised</h2>
+        <ul>
+          <li><strong>Natural bases</strong> — black through light blonde in warm, neutral, and ash families.</li>
+          <li><strong>Rooted &amp; dimensional</strong> — pre-blended root depth for low-maintenance grow-out.</li>
+          <li><strong>Balayage &amp; painted</strong> — multi-tone wefts and tips for lived-in colour results.</li>
+          <li><strong>Fashion &amp; vivid</strong> — selective shades for creative work and editorial styling.</li>
+        </ul>
+        <div class="colour-swatches" aria-hidden="true">
+          <span style="background:#1a1410"></span>
+          <span style="background:#3d2b1f"></span>
+          <span style="background:#5c4033"></span>
+          <span style="background:#7a5c44"></span>
+          <span style="background:#9a7355"></span>
+          <span style="background:#b8956b"></span>
+          <span style="background:#c9a882"></span>
+          <span style="background:#d4bc9a"></span>
+          <span style="background:#e8dcc8"></span>
+          <span style="background:#f0e6d8"></span>
+        </div>
+        <h2>Custom colour matching</h2>
+        <p>When a client's hair falls between standard shades, our team can produce a custom match from reference photos, swatches, or a posted hair sample. This service supports all extension categories — Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper pieces.</p>
+        <h2>Women Topper colour work</h2>
+        <p>Topper units require especially precise blending at the parting and perimeter. We apply the same colour standards used across our extension lines, with attention to root depth and highlight placement so the piece integrates with existing hair.</p>
+        <p>Ready to specify a shade? <a href="/contact/">Contact our team</a> with your method, length, and reference tone.</p>
+      </div>
+    </div>
+  </section>
+  <CTASection heading="Need a custom match?" text="Send your colour brief via WhatsApp with method, length, and any reference images. We will confirm feasibility and lead time." />
+</BaseLayout>

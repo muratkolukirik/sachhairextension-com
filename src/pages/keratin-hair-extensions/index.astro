@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const title = 'Keratin Tip Hair Extensions';
+const description =
+  'Keratin Tip Hair Extensions from Sach & Vogue Hair — pre-bonded strand extensions for precise, long-lasting salon installs using bulk human hair.';
+const breadcrumbs = [
+  { label: 'Hair Extensions', href: '/hair-extensions/' },
+  { label: 'Keratin Tip Hair Extensions' },
+];
+---
+
+<BaseLayout {title} {description} path="/keratin-hair-extensions/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Keratin Tip Hair Extensions</h1>
+      <div class="prose">
+        <p>Keratin Tip Hair Extensions — sometimes referred to as pre-bonded or fusion tips — allow strand-by-strand placement for stylists who need precise control over direction, density, and blend. Sach & Vogue Hair manufactures keratin bonds in several tip formats to suit micro-ring, fusion, and heat-application workflows.</p>
+        <h2>Manufacturing quality</h2>
+        <p>We use bulk human hair with intact cuticles, processed to match the movement and sheen of natural hair. Keratin bonds are applied in a controlled environment to ensure uniform tip size and secure attachment to each strand. Batch testing helps maintain bond strength and shade consistency across large salon orders.</p>
+        <h2>When keratin tips suit your client</h2>
+        <ul>
+          <li>Fine hair where flat wefts would be visible</li>
+          <li>Detailed blending around the hairline and parting</li>
+          <li>Clients who prefer a long-wear method with scheduled maintenance</li>
+        </ul>
+        <h2>Colour range</h2>
+        <p>All keratin tip orders draw from our 141-colour catalogue. Custom colour matching is available for complex multi-tone blends. We can also coordinate keratin work with <a href="/weft-hair-extensions/">Weft Hair Extensions</a> when a hybrid install is planned.</p>
+      </div>
+    </div>
+  </section>
+  <CTASection />
+</BaseLayout>

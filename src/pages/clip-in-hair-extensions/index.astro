@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const title = 'Clip-In Hair Extensions';
+const description =
+  'Clip-In Hair Extensions from Sach & Vogue Hair — removable bulk hair systems for salon retail, styling flexibility, and occasional wear.';
+const breadcrumbs = [
+  { label: 'Hair Extensions', href: '/hair-extensions/' },
+  { label: 'Clip-In Hair Extensions' },
+];
+---
+
+<BaseLayout {title} {description} path="/clip-in-hair-extensions/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Clip-In Hair Extensions</h1>
+      <div class="prose">
+        <p>Clip-In Hair Extensions offer a removable option for clients who want flexibility without a semi-permanent install. Sach & Vogue Hair manufactures clip-in sets from the same bulk human hair used across our salon lines, with reinforced weft bases and discreet clips that withstand daily styling.</p>
+        <h2>Salon and retail applications</h2>
+        <ul>
+          <li>Custom sets cut and layered to match a client's haircut</li>
+          <li>Retail-ready packs for salons that offer take-home volume pieces</li>
+          <li>Occasional wear for events, photo work, or trial before a permanent method</li>
+        </ul>
+        <h2>Construction details</h2>
+        <p>Each piece is built with secure snap clips, double-wefted where extra durability is needed, and finished to minimise shedding during brushing and heat styling. Sets can be ordered in standard piece counts or configured for your salon's preferred layout.</p>
+        <h2>Colour matching</h2>
+        <p>Clip-ins are available across our 141-shade range. When a client needs a tone that sits between catalogue shades, our custom colour matching service can produce a closer blend. See our <a href="/hair-extension-colours/">colour page</a> for how we structure shade families.</p>
+      </div>
+    </div>
+  </section>
+  <CTASection />
+</BaseLayout>

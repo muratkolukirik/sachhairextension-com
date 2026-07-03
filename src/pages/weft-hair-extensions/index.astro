@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const title = 'Weft Hair Extensions';
+const description =
+  'Weft Hair Extensions manufactured by Sach & Vogue Hair — machine and hand-tied wefts for sew-in, beaded, and hybrid salon methods.';
+const breadcrumbs = [
+  { label: 'Hair Extensions', href: '/hair-extensions/' },
+  { label: 'Weft Hair Extensions' },
+];
+---
+
+<BaseLayout {title} {description} path="/weft-hair-extensions/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Weft Hair Extensions</h1>
+      <div class="prose">
+        <p>Weft Hair Extensions provide a versatile foundation for sew-in, beaded row, and hybrid installs. Sach & Vogue Hair produces both machine-wefted and hand-tied wefts from bulk human hair, allowing stylists to choose density and flexibility based on each client's hair type and desired result.</p>
+        <h2>Weft types we manufacture</h2>
+        <ul>
+          <li><strong>Machine wefts</strong> — durable, consistent rows suited to full-head sew-in work and volume builds.</li>
+          <li><strong>Hand-tied wefts</strong> — lighter, more flexible wefts that lay flat against the scalp for natural movement.</li>
+        </ul>
+        <h2>Professional considerations</h2>
+        <p>Weft selection affects how much weight sits on the natural hair and how the install behaves during styling. We advise salons on row spacing, weft width, and grams per pack when planning a new account or a complex transformation. Our <a href="/hair-extension-weight-guide/">weight guide</a> offers a practical starting point for common install sizes.</p>
+        <h2>Colour and supply</h2>
+        <p>Weft orders are available in all 141 standard shades, with custom colour matching for clients who need a bespoke blend. International dispatch via DHL Express keeps reorder cycles predictable for busy salons.</p>
+        <p>Related: <a href="/tape-in-hair-extensions/">Tape-In Hair Extensions</a> · <a href="/clip-in-hair-extensions/">Clip-In Hair Extensions</a></p>
+      </div>
+    </div>
+  </section>
+  <CTASection />
+</BaseLayout>

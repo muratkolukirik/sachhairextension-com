@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+import { CATEGORIES } from '../../data/site';
+
+const title = 'Human Hair Extensions for Salons';
+const description =
+  'An overview of human hair extension systems manufactured by Sach & Vogue Hair — tape-in, keratin tip, weft, and clip-in options for professional stylists.';
+const breadcrumbs = [{ label: 'Hair Extensions', href: '/hair-extensions/' }];
+---
+
+<BaseLayout {title} {description} path="/hair-extensions/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Human hair extensions for professional salons</h1>
+      <div class="prose">
+        <p>Sach & Vogue Hair manufactures extension systems from bulk human hair for stylists who need predictable quality across reorders. Rather than sourcing finished goods from third parties, we control production at our Fethiye / Ölüdeniz facility — from weft construction and bond application to colour processing and final quality review.</p>
+        <p>Choosing the right method depends on your client's hair density, lifestyle, and maintenance preferences. The categories below represent our core manufacturing lines. Each page explains how the system is built, typical salon applications, and what to consider when specifying length and weight.</p>
+      </div>
+      <div class="card-grid">
+        {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
+          <article class="card">
+            <h2 class="card__title"><a href={href}>{catTitle}</a></h2>
+            <p class="card__text">{catDesc}</p>
+            <a href={href} class="card__link">View details →</a>
+          </article>
+        ))}
+      </div>
+      <div class="prose" style="margin-top: 3rem;">
+        <h2>Women Topper pieces</h2>
+        <p>For clients who need targeted volume or coverage rather than a full extension install, we produce Women Topper units in complementary shades from our 141-colour range. Topper work pairs naturally with our custom colour matching service when a seamless blend with existing hair is essential.</p>
+        <p><a href="/hair-extension-colours/">Colour &amp; matching →</a> · <a href="/hair-extension-weight-guide/">Weight guide →</a></p>
+      </div>
+    </div>
+  </section>
+  <CTASection heading="Discuss your salon range" text="Tell us which methods you install most often and we will recommend suitable lengths, weights, and colour formats." />
+</BaseLayout>

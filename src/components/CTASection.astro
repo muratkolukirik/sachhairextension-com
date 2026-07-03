@@ -1,0 +1,21 @@
+---
+import { SITE } from '../data/site';
+
+interface Props {
+  heading?: string;
+  text?: string;
+}
+
+const {
+  heading = 'Speak with our team',
+  text = 'Share your salon requirements, preferred extension method, or colour brief. We respond via WhatsApp during business hours.',
+} = Astro.props;
+---
+
+<section class="section cta-band">
+  <div class="container">
+    <h2>{heading}</h2>
+    <p>{text}</p>
+    <a href={SITE.whatsapp} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const title = 'Tape-In Hair Extensions';
+const description =
+  'Tape-In Hair Extensions manufactured by Sach & Vogue Hair for discreet salon installs. Ultra-thin wefts, bulk hair quality, and international DHL Express shipping.';
+const breadcrumbs = [
+  { label: 'Hair Extensions', href: '/hair-extensions/' },
+  { label: 'Tape-In Hair Extensions' },
+];
+---
+
+<BaseLayout {title} {description} path="/tape-in-hair-extensions/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Tape-In Hair Extensions</h1>
+      <div class="prose">
+        <p>Tape-In Hair Extensions remain one of the most requested salon methods for adding length and volume with minimal visibility. At Sach & Vogue Hair, we manufacture tape wefts using bulk human hair selected for soft texture and even cuticle direction, paired with medical-grade adhesive tabs designed for professional application and removal.</p>
+        <h2>How our tape wefts are built</h2>
+        <p>Each weft is hand-tied or machine-processed to a specified width and density, then sealed with reusable adhesive tabs. Stylists receive consistent weft dimensions across batches, which simplifies sectioning patterns and reinstall schedules. We produce standard lengths and can advise on weight per pack based on your client's natural density.</p>
+        <h2>Salon applications</h2>
+        <ul>
+          <li>Full-head volume and length transformations</li>
+          <li>Partial installs for face-framing or crown support</li>
+          <li>Maintenance cycles with repositioning rather than full replacement</li>
+        </ul>
+        <h2>Colour and ordering</h2>
+        <p>Tape-In orders are available across our 141-shade library, including rooted and balayage formats. Custom colour matching is supported when a client falls between standard tones. International orders ship via DHL Express once production is complete.</p>
+        <p>Related: <a href="/keratin-hair-extensions/">Keratin Tip Hair Extensions</a> · <a href="/hair-extension-weight-guide/">Weight guide</a></p>
+      </div>
+    </div>
+  </section>
+  <CTASection />
+</BaseLayout>

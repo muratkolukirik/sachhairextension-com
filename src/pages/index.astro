@@ -1,11 +1,70 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+import { SITE, CATEGORIES } from '../data/site';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = 'Premium Human Hair Extensions Manufacturer';
+const description =
+  'Sach & Vogue Hair manufactures premium human hair extensions in Fethiye / Ölüdeniz for salons and professional clients worldwide. Tape-in, keratin, weft, and clip-in systems with 141 colour options.';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout {title} {description} path="/" includeWebsiteSchema>
+  <section class="hero">
+    <div class="container hero__inner">
+      <span class="section__eyebrow">Fethiye / Ölüdeniz · Türkiye</span>
+      <h1>Premium human hair extensions, crafted for professional salons</h1>
+      <p class="section__lead">
+        Sach & Vogue Hair is a manufacturer of bulk human hair extension systems — not a reseller. From our studio in Fethiye / Ölüdeniz, we produce Tape-In, Keratin Tip, Weft, and Clip-In extensions for stylists who expect consistent quality, natural movement, and reliable supply.
+      </p>
+      <div class="hero__actions">
+        <a href={SITE.whatsapp} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp our team</a>
+        <a href="/professional-salon-supply/" class="btn btn--outline">Salon supply</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section__eyebrow">What we manufacture</span>
+      <h2>Extension systems built for salon work</h2>
+      <p class="section__lead">Each category is produced in-house using carefully sourced bulk hair, with attention to cuticle alignment, bond integrity, and shade consistency across orders.</p>
+      <div class="card-grid">
+        {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
+          <article class="card">
+            <h3 class="card__title"><a href={href}>{catTitle}</a></h3>
+            <p class="card__text">{catDesc}</p>
+            <a href={href} class="card__link">Learn more →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <div class="prose">
+        <span class="section__eyebrow">Colour &amp; toppers</span>
+        <h2>141 shades and custom colour matching</h2>
+        <p>Our colour library spans natural bases, rooted tones, balayage blends, and fashion shades. Stylists can order from the full range or request custom colour matching when a client needs a precise blend. We also manufacture Women Topper pieces for volume and coverage applications where a discreet, natural result matters.</p>
+        <p><a href="/hair-extension-colours/">Explore our colour approach →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <span class="section__eyebrow">International supply</span>
+        <h2>Reliable delivery for professional clients</h2>
+        <p>We ship extension orders internationally via DHL Express, with clear communication on production timelines and dispatch. Whether you operate a single chair or a multi-location salon group, our team supports consistent reordering and category-specific guidance.</p>
+        <ul class="feature-list">
+          <li>Manufacturer-direct pricing structure for qualified salon accounts</li>
+          <li>Bulk hair production with batch consistency</li>
+          <li>Technical guidance on weight, length, and method selection</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

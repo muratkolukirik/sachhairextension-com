@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE } from '../../data/site';
+
+const title = 'Professional Salon Supply';
+const description =
+  'Manufacturer-direct salon supply from Sach & Vogue Hair — bulk human hair extensions, consistent reordering, DHL Express shipping, and technical support for professional clients.';
+const breadcrumbs = [{ label: 'Professional Salon Supply' }];
+---
+
+<BaseLayout {title} {description} path="/professional-salon-supply/" {breadcrumbs}>
+  <section class="section">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Professional salon supply</h1>
+      <div class="prose">
+        <p>Sach & Vogue Hair works directly with salons, stylists, and distributors who need a dependable manufacturing partner — not a marketplace of inconsistent sources. Based in Fethiye / Ölüdeniz, we produce extension systems from bulk human hair and ship internationally to qualified professional accounts.</p>
+        <h2>What professional clients receive</h2>
+        <ul class="feature-list">
+          <li>Direct access to our manufacturing lines: Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper</li>
+          <li>141-colour catalogue with custom matching when standard shades are not enough</li>
+          <li>Batch consistency designed to simplify reorders and client maintenance</li>
+          <li>International dispatch via DHL Express with clear production timelines</li>
+          <li>Guidance on weight, length, and method selection from our production team</li>
+        </ul>
+        <h2>Who we supply</h2>
+        <p>We focus on professional users — independent stylists, salon groups, and regional distributors serving the beauty trade. If you are building a new extension menu or switching suppliers, we can walk through category fit, typical order structures, and colour planning before your first production run.</p>
+        <h2>Getting started</h2>
+        <p>Reach out with your salon name, location, the methods you install, and approximate monthly volume. We will respond via WhatsApp or phone to discuss account setup and sample options where appropriate.</p>
+        <p>Explore our categories: <a href="/hair-extensions/">Hair Extensions overview</a> · <a href="/hair-extension-weight-guide/">Weight guide</a></p>
+      </div>
+      <div class="contact-card">
+        <dl>
+          <dt>WhatsApp</dt>
+          <dd><a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer">{SITE.phone}</a></dd>
+          <dt>Location</dt>
+          <dd>{SITE.address.street}, {SITE.address.city}, {SITE.address.postalCode}</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+  <CTASection heading="Open a professional account" text="Message us on WhatsApp with your salon details and preferred extension methods." />
+</BaseLayout>

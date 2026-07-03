@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../data/site';
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  breadcrumbs?: Crumb[];
+  includeWebsiteSchema?: boolean;
+}
+
+const { title, description, path, breadcrumbs = [], includeWebsiteSchema = false } = Astro.props;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'LocalBusiness'],
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.tagline,
+  telephone: SITE.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: SITE.address.street,
+    addressLocality: 'Fethiye',
+    addressRegion: 'Muğla',
+    postalCode: SITE.address.postalCode,
+    addressCountry: SITE.address.country,
+  },
+  areaServed: 'Worldwide',
+  sameAs: [SITE.instagram, SITE.mainSite],
+};
+
+const websiteSchema = includeWebsiteSchema
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: SITE.name,
+      url: SITE.url,
+      description: SITE.tagline,
+    }
+  : null;
+
+const breadcrumbSchema =
+  breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+          ...breadcrumbs.map((crumb, index) => ({
+            '@type': 'ListItem',
+            position: index + 2,
+            name: crumb.label,
+            item: crumb.href ? new URL(crumb.href, SITE.url).href : new URL(path, SITE.url).href,
+          })),
+        ],
+      }
+    : null;
+
+const jsonLd = [organizationSchema, websiteSchema, breadcrumbSchema].filter(Boolean);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO title={title} description={description} path={path} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd.length === 1 ? jsonLd[0] : jsonLd)} />
+  </head>
+  <body>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
