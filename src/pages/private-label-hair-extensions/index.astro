@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+
+const title = 'Private Label Hair Extensions';
+const description =
+  'Private label hair extensions manufacturing from Sach & Vogue Hair — brand-ready professional supply, 141-colour consistency, and production discipline for salons and boutique hair brands.';
+const breadcrumbs = [{ label: 'Private Label Hair Extensions' }];
+---
+
+<BaseLayout {title} {description} path="/private-label-hair-extensions/" {breadcrumbs}>
+  <section class="page-intro">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Private label hair extensions manufacturing</h1>
+      <p class="section__lead">
+        Sach &amp; Vogue Hair manufactures extension systems for professional salons, distributors, and boutique hair brands that need their own identity — built on colour control, construction quality, and reliable communication.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container article-body">
+      <div class="prose">
+        <p>Private label is not simply placing a logo on generic stock. It is a manufacturing relationship where colour batches, weft construction, bond formats, lengths, textures, and packaging logic must remain stable across reorders. From our production facility in Fethiye / Ölüdeniz, we support private label projects across Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper categories.</p>
+
+        <h2>Who private label manufacturing serves</h2>
+        <ul class="topic-list">
+          <li><strong>Professional salons</strong> — building a house brand for extension services and reordering.</li>
+          <li><strong>Distributors</strong> — supplying regional salon networks with consistent bulk hair systems.</li>
+          <li><strong>Boutique hair brands</strong> — launching or scaling a curated extension line with manufacturer backing.</li>
+          <li><strong>Training academies and educators</strong> — aligning product identity with professional education programmes.</li>
+        </ul>
+
+        <h2>What a private label project includes</h2>
+        <p>Each project begins with method selection and shade planning. We work from our 141-colour library and pigment-based professional colouring system, with custom matching when standard codes are not sufficient. Length, texture, and construction options depend on the chosen category:</p>
+        <ul>
+          <li>Tape-In wefts with specified tab widths and PU adhesive quality</li>
+          <li>Keratin tips in Flat, U, V, or I formats with controlled strand weight</li>
+          <li>Machine weft extensions with attention to stitch density and track stability</li>
+          <li>Clip-In sets planned by piece count, distribution, and sewing quality</li>
+          <li>Women Topper units with parting and perimeter blend requirements</li>
+        </ul>
+
+        <ManufacturerNote title="Why private label must be built on production discipline">
+          <p>A brand name cannot compensate for inconsistent colour, weak weft stitching, or unpredictable bond quality. Private label clients choose Sach &amp; Vogue Hair because we control manufacturing — bulk hair selection, sorting, pigment work, method-specific construction, and quality review — rather than repackaging third-party goods.</p>
+        </ManufacturerNote>
+
+        <h2>Colour consistency for branded lines</h2>
+        <p>Private label lines live or fail on shade stability. We document colour references, batch notes, and reorder specifications so your brand palette remains recognisable across production cycles. Daylight photo matching and colour ring consultation are part of serious brand development — not optional extras.</p>
+        <p>Read our <a href="/hair-extension-colours-colour-code-guide/">Colour Code Guide</a> for how we structure professional shade logic.</p>
+
+        <h2>Packaging consultation</h2>
+        <p>We discuss packaging direction, labelling requirements, and presentation formats during project planning. Minimum order structures depend on method, shade complexity, and production setup — we confirm scope individually rather than publishing generic thresholds that may not reflect your project.</p>
+
+        <h2>Why quality matters more than speed alone</h2>
+        <div class="comparison-grid">
+          <div class="comparison-col">
+            <h3>What strong private label requires</h3>
+            <ul>
+              <li>Stable pigment-based colour batches</li>
+              <li>Method-appropriate construction</li>
+              <li>Clear communication on lead times</li>
+              <li>Reorder documentation</li>
+              <li>International dispatch via DHL Express</li>
+            </ul>
+          </div>
+          <div class="comparison-col">
+            <h3>What undermines a brand quickly</h3>
+            <ul>
+              <li>Shade drift between orders</li>
+              <li>Inconsistent weft or bond quality</li>
+              <li>Unclear product specifications</li>
+              <li>No manufacturer accountability</li>
+              <li>Retail-only supply with no salon logic</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>Related: <a href="/wholesale-hair-extensions/">Wholesale hair extensions</a> · <a href="/the-dna-of-sach-hair-extensions/">The DNA of Sach Hair Extensions</a> · <a href="/professional-salon-supply/">Professional salon supply</a></p>
+      </div>
+    </div>
+  </section>
+
+  <ConsultationCTA
+    heading="Discuss a private label project"
+    text="Share your brand direction, target methods, shade range, and distribution model. We will respond via WhatsApp with feasibility and next steps."
+    button="Discuss a private label project on WhatsApp"
+  />
+</BaseLayout>

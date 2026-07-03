@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
 import CTASection from '../../components/CTASection.astro';
 
-const title = 'Weft Hair Extensions';
+const title = 'Weft Hair Extensions Manufacturing';
 const description =
-  'Weft Hair Extensions manufactured by Sach & Vogue Hair — machine and hand-tied wefts for sew-in, beaded, and hybrid salon methods.';
+  'Weft hair extensions manufactured by Sach & Vogue Hair — machine weft construction, track stability, wholesale supply, and 141-colour professional colouring.';
 const breadcrumbs = [
   { label: 'Hair Extensions', href: '/hair-extensions/' },
   { label: 'Weft Hair Extensions' },
@@ -16,25 +17,39 @@ const breadcrumbs = [
   <section class="page-intro">
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>Weft Hair Extensions</h1>
+      <h1>Weft hair extensions manufacturing</h1>
+      <p class="section__lead">
+        Machine-wefted bulk human hair for sew-in, beaded row, and hybrid installs — where stitch quality and track stability define professional results.
+      </p>
     </div>
   </section>
+
   <section class="section section--compact">
-    <div class="container">
+    <div class="container article-body">
       <div class="prose">
-        <p>Weft Hair Extensions provide a versatile foundation for sew-in, beaded row, and hybrid installs. Sach & Vogue Hair produces both machine-wefted and hand-tied wefts from bulk human hair, allowing stylists to choose density and flexibility based on each client's hair type and desired result.</p>
-        <h2>Weft types we manufacture</h2>
+        <p>Weft Hair Extensions provide a versatile foundation for professional volume and length work. Sach &amp; Vogue Hair produces machine wefts from sorted bulk human hair at our Fethiye / Ölüdeniz facility, supplying salons and wholesale clients who evaluate wefts on construction — not gram price alone.</p>
+
+        <h2>Machine weft manufacturing</h2>
+        <p>Our machine wefts are built for durable row work with controlled stitch density and track width. In salon conversation in Türkiye, weft extensions are sometimes called <em>tres</em>; internationally we use the term <strong>weft hair extensions</strong> for clarity with export clients.</p>
+
+        <ManufacturerNote title="Construction over commodity">
+          <p>A weft is defined by how it is stitched, how it lies against the scalp, and how it behaves when cut or sealed — not only by origin or weight. Weak tracks create shedding, bulk at the seam, and maintenance problems that stylists inherit from poor manufacturing.</p>
+        </ManufacturerNote>
+
+        <h2>Professional applications</h2>
         <ul>
-          <li><strong>Machine wefts</strong> — durable, consistent rows suited to full-head sew-in work and volume builds.</li>
-          <li><strong>Hand-tied wefts</strong> — lighter, more flexible wefts that lay flat against the scalp for natural movement.</li>
+          <li>Full-head sew-in transformations with row mapping and weight distribution</li>
+          <li>Beaded weft methods requiring stable but flexible tracks</li>
+          <li>Hybrid installs combining wefts with keratin tips or tape rows</li>
+          <li>Wholesale supply through our <a href="/wholesale-weft-hair-extensions/">Wholesale Weft programme</a></li>
         </ul>
-        <h2>Professional considerations</h2>
-        <p>Weft selection affects how much weight sits on the natural hair and how the install behaves during styling. We advise salons on row spacing, weft width, and grams per pack when planning a new account or a complex transformation. Our <a href="/hair-extension-weight-guide/">weight guide</a> offers a practical starting point for common install sizes.</p>
-        <h2>Colour and supply</h2>
-        <p>Weft orders are available in all 141 standard shades, with custom colour matching for clients who need a bespoke blend. International dispatch via DHL Express keeps reorder cycles predictable for busy salons.</p>
+
+        <h2>Colour and ordering</h2>
+        <p>Weft orders draw from our 141-colour catalogue with custom matching available. Straight and wavy textures are confirmed per project based on current production lines. Our <a href="/hair-extension-weight-guide/">Weight Guide</a> supports row and gram planning.</p>
+
         <p>Related: <a href="/tape-in-hair-extensions/">Tape-In Hair Extensions</a> · <a href="/clip-in-hair-extensions/">Clip-In Hair Extensions</a></p>
       </div>
     </div>
   </section>
-  <CTASection />
+  <CTASection heading="Weft production enquiry" text="Share row plans, shade codes, lengths, and wholesale or salon volume for specification support." />
 </BaseLayout>

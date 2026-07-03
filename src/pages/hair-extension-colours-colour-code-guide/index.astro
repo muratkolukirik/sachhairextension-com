@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+
+const title = 'Hair Extension Colours & Colour Code Guide';
+const description =
+  'Hair extension colours and colour code guide from Sach & Vogue Hair — 141 professional shades, pigment-based colouring, daylight matching, and salon consultation logic.';
+const breadcrumbs = [
+  { label: 'Hair Extension Colours', href: '/hair-extension-colours/' },
+  { label: 'Colour Code Guide' },
+];
+---
+
+<BaseLayout {title} {description} path="/hair-extension-colours-colour-code-guide/" {breadcrumbs}>
+  <section class="page-intro">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Hair extension colours &amp; colour code guide</h1>
+      <p class="section__lead">
+        Sach &amp; Vogue Hair works with 141 professional colours — structured for salon consultation, pigment-based consistency, and reliable reordering across Tape-In, Keratin, Weft, Clip-In, and Topper production.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container article-body">
+      <div class="prose">
+        <p>Colour is the most underestimated variable in extension work. A stylist may specify the correct method and weight, yet still fail the blend because the shade was guessed under warm indoor light, because #1 jet black was ordered when #1B natural black was needed, or because a balayage pattern was treated as a flat single tone. This guide explains how we structure colour codes and how salons should consult before ordering.</p>
+
+        <h2>Our 141-colour system</h2>
+        <p>Every shade in our library is produced through professional pigment work — not ad hoc toning. Batches are documented so wholesale, private label, and salon reorder clients receive consistent results. The system spans:</p>
+        <ul>
+          <li>Natural bases from deep brown through light blonde</li>
+          <li>Ash, neutral, and warm undertone families</li>
+          <li>Rooted and dimensional formats for softer grow-out</li>
+          <li>Balayage, ombré, and highlight-blended wefts and tips</li>
+          <li>Select fashion and vivid tones for creative work</li>
+        </ul>
+
+        <div class="colour-swatches" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <h2>Colour code logic</h2>
+        <p>Codes exist to reduce ambiguity between stylist, client, and manufacturer. A structured code communicates base depth, undertone, and dimensional format. When ordering, specify:</p>
+        <ul class="topic-list">
+          <li><strong>Base level</strong> — depth from dark to light within the natural range.</li>
+          <li><strong>Undertone</strong> — ash, neutral, gold, or copper direction.</li>
+          <li><strong>Format</strong> — solid, rooted, balayage, ombré, or highlight blend.</li>
+          <li><strong>Method</strong> — tape weft, keratin tip, machine weft, clip piece, or topper base.</li>
+        </ul>
+
+        <ManufacturerNote title="#1B natural black is not #1 jet black">
+          <p>Stylists sometimes treat all dark shades as interchangeable. #1 jet black reads flat and dense; #1B natural black carries softer depth that blends with many natural dark bases. Ordering the wrong dark code is one of the most common — and most visible — consultation errors.</p>
+        </ManufacturerNote>
+
+        <h2>Why colour matching should not be guessed from indoor light</h2>
+        <p>Warm salon lighting, yellow bulbs, and evening ambient light distort both natural hair and extension swatches. Professional matching should reference daylight or calibrated photos taken in consistent conditions. When precision matters, we support custom colour matching from reference images, swatches, or posted hair samples.</p>
+
+        <h2>Salon colour consultation workflow</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <p class="process-step__num">01</p>
+            <h3>Assess natural hair</h3>
+            <p>Document base level, undertone, highlight pattern, and root depth in daylight.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">02</p>
+            <h3>Define the target</h3>
+            <p>Clarify whether the install maintains, enhances, or transforms the existing palette.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">03</p>
+            <h3>Reference the colour ring</h3>
+            <p>Compare catalogue codes rather than informal names or memory.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">04</p>
+            <h3>Document for reorder</h3>
+            <p>Record codes, method, length, and batch notes for future consistency.</p>
+          </div>
+        </div>
+
+        <h2>Colour ring importance</h2>
+        <p>A professional colour ring is not a sales accessory — it is a consultation instrument. Salons building extension services should work from physical or documented shade references tied to manufacturer codes. This reduces reorder drift and client disappointment on maintenance visits.</p>
+
+        <h2>Pigment-based professional colouring</h2>
+        <p>Our manufacturing colour work uses professional pigments applied with batch discipline. This supports the consistency private label brands, wholesale distributors, and high-volume salons require. Read <a href="/the-dna-of-sach-hair-extensions/">The DNA of Sach Hair Extensions</a> for our full manufacturing philosophy.</p>
+
+        <p>Related: <a href="/hair-extension-colours/">Hair extension colours overview</a> · <a href="/private-label-hair-extensions/">Private label manufacturing</a></p>
+      </div>
+    </div>
+  </section>
+
+  <ConsultationCTA
+    heading="Colour consultation"
+    text="Send your shade references, method, and daylight photos via WhatsApp for matching guidance."
+  />
+</BaseLayout>

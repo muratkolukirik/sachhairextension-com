@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+
+const title = 'Wholesale Weft Hair Extensions';
+const description =
+  'Wholesale weft hair extensions manufactured by Sach & Vogue Hair — machine weft construction, track stability, custom colour, and professional supply for salons and distributors.';
+const breadcrumbs = [
+  { label: 'Wholesale Hair Extensions', href: '/wholesale-hair-extensions/' },
+  { label: 'Wholesale Weft Hair Extensions' },
+];
+---
+
+<BaseLayout {title} {description} path="/wholesale-weft-hair-extensions/" {breadcrumbs}>
+  <section class="page-intro">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Wholesale weft hair extensions</h1>
+      <p class="section__lead">
+        Machine-wefted bulk hair for salon and wholesale supply — where construction quality, stitch density, and colour consistency matter as much as grams on the scale.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container article-body">
+      <div class="prose">
+        <p>Weft hair extensions are a core wholesale category for salons running sew-in, beaded row, and hybrid installs. Sach &amp; Vogue Hair manufactures machine wefts from carefully sorted bulk human hair at our Fethiye / Ölüdeniz facility. In Türkiye, this category is often referred to as <em>tres</em> in salon conversation — we use the international term <strong>weft hair extensions</strong> for clarity with export and professional clients.</p>
+
+        <h2>Manufacturer perspective: weft is construction, not only weight</h2>
+        <p>Wholesale buyers sometimes compare wefts by gram price alone. From a manufacturing standpoint, a weft is defined by stitch tension, track width, hair direction, sealing behaviour when cut, and how the weft lies against the scalp. Weak construction creates shedding, bulk at the seam, and client discomfort — regardless of hair origin.</p>
+
+        <ManufacturerNote title="What we control in weft production">
+          <p>Bulk hair sorting, weft stitching density, track stability, shade batching under our 141-colour pigment system, and final inspection before dispatch. Wholesale weft supply should be evaluated on these factors alongside length and texture availability.</p>
+        </ManufacturerNote>
+
+        <h2>Machine weft manufacturing</h2>
+        <p>Our machine wefts are produced for professional volume work where durability and consistent row dimensions support predictable sectioning. Stitch quality affects how the weft behaves when trimmed, layered, or integrated with other methods.</p>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <p class="process-step__num">01</p>
+            <h3>Bulk hair selection</h3>
+            <p>Sorted for cuticle alignment, texture, and shade family before weft processing.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">02</p>
+            <h3>Stitching &amp; density</h3>
+            <p>Machine weft rows built to specified density with controlled track width.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">03</p>
+            <h3>Colour batching</h3>
+            <p>Pigment-based professional colouring under our 141-shade documentation system.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">04</p>
+            <h3>Quality review</h3>
+            <p>Inspection for stitch integrity, shade consistency, and pack specification.</p>
+          </div>
+        </div>
+
+        <h2>Salon and wholesale usage</h2>
+        <ul>
+          <li>Full-head sew-in transformations with row planning and weight distribution</li>
+          <li>Beaded weft methods requiring flexible but stable tracks</li>
+          <li>Hybrid installs combining wefts with keratin tips or tape wefts</li>
+          <li>Distributor supply to regional salon networks with reorder documentation</li>
+        </ul>
+
+        <h2>Cutting, sealing, and professional awareness</h2>
+        <p>Machine wefts may require sealing or careful cutting depending on install technique. Stylists should plan row placement, weft width, and how cut sections behave during maintenance. Our team advises wholesale clients on weight and row logic — see the <a href="/hair-extension-weight-guide/">Weight Guide</a>.</p>
+
+        <h2>Colour and texture options</h2>
+        <p>Wholesale weft orders draw from our full 141-colour catalogue with custom matching available. Straight and wavy textures are discussed during ordering based on current production lines — we confirm availability for each project rather than overpromising open-stock combinations.</p>
+
+        <p>Related: <a href="/weft-hair-extensions/">Weft hair extensions overview</a> · <a href="/wholesale-hair-extensions/">Wholesale hair extensions</a></p>
+      </div>
+    </div>
+  </section>
+
+  <ConsultationCTA
+    heading="Wholesale weft enquiry"
+    text="Share your target shades, lengths, texture requirements, and distribution model for a production consultation."
+  />
+</BaseLayout>

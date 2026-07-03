@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
 import CTASection from '../../components/CTASection.astro';
 
-const title = 'Tape-In Hair Extensions';
+const title = 'Tape-In Hair Extensions Manufacturing';
 const description =
-  'Tape-In Hair Extensions manufactured by Sach & Vogue Hair for discreet salon installs. Ultra-thin wefts, bulk hair quality, and international DHL Express shipping.';
+  'Tape-In hair extensions manufactured by Sach & Vogue Hair — PU tape tab quality, professional salon placement, 2–4 cm weft formats, colour matching, and re-taping logic.';
 const breadcrumbs = [
   { label: 'Hair Extensions', href: '/hair-extensions/' },
   { label: 'Tape-In Hair Extensions' },
@@ -16,26 +17,52 @@ const breadcrumbs = [
   <section class="page-intro">
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>Tape-In Hair Extensions</h1>
+      <h1>Tape-In hair extensions manufacturing</h1>
+      <p class="section__lead">
+        Ultra-thin wefts with professional PU adhesive tabs — manufactured for discreet row placement, salon maintenance cycles, and consistent reordering from our Fethiye / Ölüdeniz production facility.
+      </p>
     </div>
   </section>
+
   <section class="section section--compact">
-    <div class="container">
+    <div class="container article-body">
       <div class="prose">
-        <p>Tape-In Hair Extensions remain one of the most requested salon methods for adding length and volume with minimal visibility. At Sach & Vogue Hair, we manufacture tape wefts using bulk human hair selected for soft texture and even cuticle direction, paired with medical-grade adhesive tabs designed for professional application and removal.</p>
+        <p>Tape-In Hair Extensions remain one of the most requested salon methods for adding length and volume with minimal visibility. At Sach &amp; Vogue Hair, we manufacture tape wefts from sorted bulk human hair selected for soft texture and even cuticle direction, paired with medical-grade PU adhesive tabs designed for professional application, repositioning, and removal.</p>
+
+        <h2>PU tape tab quality</h2>
+        <p>The adhesive system is as important as the hair. Our PU tabs are specified for professional use — secure during wear, releasable for maintenance, and compatible with correct re-taping technique. Cheap tabs create slip, residue problems, and client discomfort that stylists often blame on the hair itself.</p>
+
+        <h2>Weft widths for salon logic</h2>
+        <ul class="topic-list">
+          <li><strong>4 cm regular</strong> — standard row width for many full-head and volume installs.</li>
+          <li><strong>3 cm classic</strong> — narrower sections for finer hair or detailed placement.</li>
+          <li><strong>2 cm butterfly</strong> — compact format for face-framing, crown support, and precision work.</li>
+        </ul>
+
+        <ManufacturerNote title="Invisible-looking placement is a planning outcome">
+          <p>No tape system is invisible by default — result quality depends on sectioning depth, row spacing, weft width selection, and colour blend. We manufacture the weft and tab; the stylist creates the discreet finish through professional placement logic.</p>
+        </ManufacturerNote>
+
         <h2>How our tape wefts are built</h2>
-        <p>Each weft is hand-tied or machine-processed to a specified width and density, then sealed with reusable adhesive tabs. Stylists receive consistent weft dimensions across batches, which simplifies sectioning patterns and reinstall schedules. We produce standard lengths and can advise on weight per pack based on your client's natural density.</p>
+        <p>Each weft is processed to specified width and density, then sealed with reusable adhesive tabs. Stylists receive consistent weft dimensions across batches, which simplifies sectioning patterns and reinstall schedules. We advise on weight per pack based on client density — see our <a href="/hair-extension-weight-guide/">Weight Guide</a>.</p>
+
+        <h2>Colour matching and re-taping</h2>
+        <p>Tape-In orders are available across our 141-shade library, including rooted and balayage formats. Custom colour matching is supported when a client falls between standard tones. Maintenance visits often involve re-taping rather than full replacement — plan shade and tab quality accordingly for long-term client relationships.</p>
+
         <h2>Salon applications</h2>
         <ul>
           <li>Full-head volume and length transformations</li>
           <li>Partial installs for face-framing or crown support</li>
           <li>Maintenance cycles with repositioning rather than full replacement</li>
+          <li>Combination work with weft or keratin sections where hybrid installs are planned</li>
         </ul>
-        <h2>Colour and ordering</h2>
-        <p>Tape-In orders are available across our 141-shade library, including rooted and balayage formats. Custom colour matching is supported when a client falls between standard tones. International orders ship via DHL Express once production is complete.</p>
-        <p>Related: <a href="/keratin-hair-extensions/">Keratin Tip Hair Extensions</a> · <a href="/hair-extension-weight-guide/">Weight guide</a></p>
+
+        <h2>Manufacturing innovation</h2>
+        <p>We continue R&amp;D on weft thinness, tab performance, and shade formats. We do not market unverified &ldquo;injected invisible tape&rdquo; claims — innovation is communicated when production-ready, not as speculative positioning.</p>
+
+        <p>Related: <a href="/keratin-hair-extensions/">Keratin Tip Hair Extensions</a> · <a href="/wholesale-hair-extensions/">Wholesale supply</a> · <a href="/hair-extensions-training/">Professional training</a></p>
       </div>
     </div>
   </section>
-  <CTASection />
+  <CTASection heading="Tape-In production enquiry" text="Share your salon volume, preferred weft widths, and shade range for a manufacturing consultation." />
 </BaseLayout>

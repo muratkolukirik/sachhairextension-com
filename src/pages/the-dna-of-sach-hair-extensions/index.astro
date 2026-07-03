@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+
+const title = 'The DNA of Sach Hair Extensions';
+const description =
+  'The DNA of Sach Hair Extensions — manufacturing philosophy from Sach & Vogue Hair: bulk hair selection, 141 professional pigments, method-specific construction, and quality control.';
+const breadcrumbs = [{ label: 'The DNA of Sach Hair Extensions' }];
+---
+
+<BaseLayout {title} {description} path="/the-dna-of-sach-hair-extensions/" {breadcrumbs}>
+  <section class="page-intro">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>The DNA of Sach Hair Extensions: 141 colours, professional pigments and manufacturer discipline</h1>
+      <p class="section__lead">
+        This is not a catalogue page. It is the manufacturing philosophy behind Sach &amp; Vogue Hair — how bulk hair becomes professional extension systems at our Fethiye / Ölüdeniz production house.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container article-body">
+      <div class="prose">
+        <p>Sach &amp; Vogue Hair is not a reseller assembling anonymous stock. We are a manufacturer — selecting bulk human hair, sorting it, colouring it with professional pigments, constructing method-specific systems, and reviewing every batch before dispatch. International salons, distributors, and private label brands work with us because the product behaves consistently in professional hands.</p>
+
+        <blockquote class="pull-quote">
+          We do not sell hair as a commodity. We produce extension systems as a discipline — colour, construction, and communication aligned.
+        </blockquote>
+
+        <h2>Bulk hair selection</h2>
+        <p>Production begins with bulk hair chosen for cuticle integrity, movement, and suitability for professional processing. Selection is not a one-time decision — each production run is assessed for texture, density behaviour, and compatibility with the target method.</p>
+
+        <h2>Sorting</h2>
+        <p>Sorting separates usable lengths, removes inconsistent strands, and prepares hair for wefting, tipping, or clip construction. Poor sorting creates visible thin spots, uneven dye uptake, and premature shedding — regardless of marketing claims elsewhere in the market.</p>
+
+        <h2>Colour work and the 141-colour system</h2>
+        <p>Our 141-colour library is built on professional pigments, not improvised toning. Shades are batched, documented, and replicable for reorder clients. From natural bases to balayage blends, colour is a manufacturing function — not an afterthought applied at packaging.</p>
+        <p>Deep dive: <a href="/hair-extension-colours-colour-code-guide/">Hair Extension Colours &amp; Colour Code Guide</a></p>
+
+        <h2>Method-specific construction</h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <p class="process-step__num">Tape-In</p>
+            <h3>Weft + PU tabs</h3>
+            <p>Ultra-thin wefts with medical-grade adhesive tabs sized for professional row work — 4 cm regular, 3 cm classic, 2 cm butterfly formats as specified.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">Keratin</p>
+            <h3>Tip bonds</h3>
+            <p>Flat, U, V, and I tips with controlled strand weight and Italian keratin bond quality for professional fusion and micro methods.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">Weft</p>
+            <h3>Machine stitching</h3>
+            <p>Track stability, stitch density, and sealing awareness for sew-in and wholesale supply — construction beyond gram weight.</p>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">Clip-In</p>
+            <h3>Set architecture</h3>
+            <p>Sewing strength, clip distribution, and piece planning for 1/3/5/7-piece professional sets and U-Clip / U-Part configurations.</p>
+          </div>
+        </div>
+
+        <ManufacturerNote title="Manufacturer-direct identity">
+          <p>When you order from Sach &amp; Vogue Hair, you communicate with the production house — not a chain of traders. That direct relationship supports private label development, wholesale reorder documentation, training alignment, and honest lead-time communication.</p>
+        </ManufacturerNote>
+
+        <h2>Quality control</h2>
+        <p>Before dispatch, batches are reviewed for shade consistency, bond and stitch integrity, weft dimensions, and pack accuracy. Quality control is how we protect salon reputations — a failed install caused by manufacturing inconsistency damages the stylist before it damages the supplier.</p>
+
+        <h2>International salon supply</h2>
+        <p>We ship professional orders internationally via DHL Express from Fethiye / Ölüdeniz. Our clients span single-chair studios, multi-location salon groups, regional distributors, and boutique brands — united by the need for repeatable manufacturing, not one-off bargains.</p>
+
+        <h2>Explore our manufacturing lines</h2>
+        <p>
+          <a href="/tape-in-hair-extensions/" class="text-link">Tape-In</a>
+          <span class="link-group__sep" aria-hidden="true"> · </span>
+          <a href="/keratin-hair-extensions/" class="text-link">Keratin Tips</a>
+          <span class="link-group__sep" aria-hidden="true"> · </span>
+          <a href="/wholesale-weft-hair-extensions/" class="text-link">Wholesale Weft</a>
+          <span class="link-group__sep" aria-hidden="true"> · </span>
+          <a href="/private-label-hair-extensions/" class="text-link">Private Label</a>
+          <span class="link-group__sep" aria-hidden="true"> · </span>
+          <a href="/hair-extensions-training/" class="text-link">Training</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <ConsultationCTA
+    heading="Speak with our production team"
+    text="Whether you are opening a wholesale account, planning private label, or specifying your first professional order — start the conversation on WhatsApp."
+  />
+</BaseLayout>
