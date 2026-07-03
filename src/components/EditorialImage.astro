@@ -1,0 +1,50 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  eager?: boolean;
+  class?: string;
+}
+
+const { src, alt, width, height, eager = false, class: className } = Astro.props;
+---
+
+<figure class:list={['editorial-image', className]}>
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+  />
+</figure>
+
+<style>
+  .editorial-image {
+    margin: 0 0 2.5rem;
+  }
+
+  .editorial-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-line);
+    background: var(--color-off-white);
+  }
+
+  .editorial-image--hero {
+    margin: 0;
+  }
+
+  .editorial-image--hero img {
+    border: none;
+    background: transparent;
+  }
+
+  .editorial-image--inline {
+    margin: 2.5rem 0;
+  }
+</style>

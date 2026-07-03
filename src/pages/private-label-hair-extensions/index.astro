@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import EditorialImage from '../../components/EditorialImage.astro';
 import ConsultationCTA from '../../components/ConsultationCTA.astro';
 
 const title = 'Private Label Hair Extensions';
@@ -23,6 +24,13 @@ const breadcrumbs = [{ label: 'Private Label Hair Extensions' }];
 
   <section class="section section--compact">
     <div class="container article-body">
+      <EditorialImage
+        src="/images/private-label-hair-extensions-packaging.webp"
+        alt="Private label hair extensions in premium white packaging with tissue wrap on a minimalist beige surface"
+        width={1448}
+        height={1086}
+        class="editorial-image--inline"
+      />
       <div class="prose">
         <p>Private label is not simply placing a logo on generic stock. It is a manufacturing relationship where colour batches, weft construction, bond formats, lengths, textures, and packaging logic must remain stable across reorders. From our production facility in Fethiye / Ölüdeniz, we support private label projects across Tape-In, Keratin Tip, Weft, Clip-In, and Women Topper categories.</p>
 

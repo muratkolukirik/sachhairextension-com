@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import EditorialImage from '../../components/EditorialImage.astro';
 import ConsultationCTA from '../../components/ConsultationCTA.astro';
 
 const title = 'Hair Extensions Training';
@@ -23,6 +24,13 @@ const breadcrumbs = [{ label: 'Hair Extensions Training' }];
 
   <section class="section section--compact">
     <div class="container article-body">
+      <EditorialImage
+        src="/images/hair-extensions-training-academy.webp"
+        alt="Professional hair extensions training session at The Extensions Academy in a bright minimalist studio"
+        width={1448}
+        height={1086}
+        class="editorial-image--inline"
+      />
       <div class="prose">
         <p>Extension results depend on two foundations: the quality of the manufactured hair system and the professional who plans, installs, maintains, and removes it. Our training programmes connect product knowledge with practical salon logic — because even premium bulk hair can underperform when method, weight, placement, or colour consultation is wrong.</p>
 

@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import EditorialImage from '../../components/EditorialImage.astro';
 import ConsultationCTA from '../../components/ConsultationCTA.astro';
 
 const title = 'The DNA of Sach Hair Extensions';
@@ -23,6 +24,13 @@ const breadcrumbs = [{ label: 'The DNA of Sach Hair Extensions' }];
 
   <section class="section section--compact">
     <div class="container article-body">
+      <EditorialImage
+        src="/images/sach-hair-extensions-manufacturing-dna.webp"
+        alt="The DNA of Sach Hair Extensions — manufacturing steps from bulk hair selection to quality control"
+        width={1536}
+        height={244}
+        class="editorial-image--inline"
+      />
       <div class="prose">
         <p>Sach &amp; Vogue Hair is not a reseller assembling anonymous stock. We are a manufacturer — selecting bulk human hair, sorting it, colouring it with professional pigments, constructing method-specific systems, and reviewing every batch before dispatch. International salons, distributors, and private label brands work with us because the product behaves consistently in professional hands.</p>
 

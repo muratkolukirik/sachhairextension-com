@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import EditorialImage from '../../components/EditorialImage.astro';
 import ConsultationCTA from '../../components/ConsultationCTA.astro';
 
 const title = 'Hair Extension Colours — 141 Professional Shades';
@@ -23,6 +24,13 @@ const breadcrumbs = [{ label: 'Hair Extension Colours' }];
 
   <section class="section section--compact">
     <div class="container article-body">
+      <EditorialImage
+        src="/images/hair-extension-colour-ring.webp"
+        alt="Professional hair extension colour ring displaying a full spectrum of 141 salon shades"
+        width={1448}
+        height={1086}
+        class="editorial-image--inline"
+      />
       <div class="prose">
         <p>Colour consistency defines extension credibility. Sach &amp; Vogue Hair maintains a structured library of 141 shades spanning natural bases, cool and warm undertones, rooted formats, balayage blends, and select fashion tones. Because we manufacture in-house, shade batches are documented to support reliable reorders for salons, wholesale clients, and private label brands.</p>
 

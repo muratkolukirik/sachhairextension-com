@@ -8,7 +8,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, path, ogImage = '/og-image.svg' } = Astro.props;
+const { title, description, path, ogImage = '/images/og-sach-hair-extensions.webp' } = Astro.props;
 const canonical = new URL(path, SITE.url).href;
 const fullTitle = path === '/' ? `${SITE.name} | ${SITE.tagline}` : `${title} | ${SITE.name}`;
 const ogImageUrl = new URL(ogImage, SITE.url).href;

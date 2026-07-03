@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ManufacturerNote from '../../components/ManufacturerNote.astro';
+import EditorialImage from '../../components/EditorialImage.astro';
 import ConsultationCTA from '../../components/ConsultationCTA.astro';
 
 const title = 'Hair Extension Colours & Colour Code Guide';
@@ -26,6 +27,13 @@ const breadcrumbs = [
 
   <section class="section section--compact">
     <div class="container article-body">
+      <EditorialImage
+        src="/images/hair-extension-colour-ring.webp"
+        alt="Hair extension colour ring fanned on ivory stone for professional shade consultation"
+        width={1448}
+        height={1086}
+        class="editorial-image--inline"
+      />
       <div class="prose">
         <p>Colour is the most underestimated variable in extension work. A stylist may specify the correct method and weight, yet still fail the blend because the shade was guessed under warm indoor light, because #1 jet black was ordered when #1B natural black was needed, or because a balayage pattern was treated as a flat single tone. This guide explains how we structure colour codes and how salons should consult before ordering.</p>
 
@@ -38,11 +46,6 @@ const breadcrumbs = [
           <li>Balayage, ombré, and highlight-blended wefts and tips</li>
           <li>Select fashion and vivid tones for creative work</li>
         </ul>
-
-        <div class="colour-swatches" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
 
         <h2>Colour code logic</h2>
         <p>Codes exist to reduce ambiguity between stylist, client, and manufacturer. A structured code communicates base depth, undertone, and dimensional format. When ordering, specify:</p>
