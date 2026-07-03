@@ -11,27 +11,39 @@ const breadcrumbs = [{ label: 'Hair Extensions', href: '/hair-extensions/' }];
 ---
 
 <BaseLayout {title} {description} path="/hair-extensions/" {breadcrumbs}>
-  <section class="section">
+  <section class="page-intro">
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
       <h1>Human hair extensions for professional salons</h1>
+      <p class="section__lead">
+        Four manufacturing lines developed for salon installation, consistent reordering, and natural movement.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container">
       <div class="prose">
-        <p>Sach & Vogue Hair manufactures extension systems from bulk human hair for stylists who need predictable quality across reorders. Rather than sourcing finished goods from third parties, we control production at our Fethiye / Ölüdeniz facility — from weft construction and bond application to colour processing and final quality review.</p>
-        <p>Choosing the right method depends on your client's hair density, lifestyle, and maintenance preferences. The categories below represent our core manufacturing lines. Each page explains how the system is built, typical salon applications, and what to consider when specifying length and weight.</p>
+        <p>Sach & Vogue Hair manufactures extension systems from bulk human hair for stylists who need predictable quality across reorders. Rather than sourcing finished goods from third parties, we control production at our Fethiye / Ölüdeniz facility — from weft construction and bond application to colour processing and final inspection.</p>
+        <p>Choosing the right method depends on your client's hair density, lifestyle, and maintenance preferences. Each page below explains how the system is built, typical salon applications, and what to consider when specifying length and weight.</p>
       </div>
       <div class="card-grid">
         {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
           <article class="card">
             <h2 class="card__title"><a href={href}>{catTitle}</a></h2>
             <p class="card__text">{catDesc}</p>
-            <a href={href} class="card__link">View details →</a>
+            <a href={href} class="text-link">View details</a>
           </article>
         ))}
       </div>
-      <div class="prose" style="margin-top: 3rem;">
+      <div class="prose prose--follow">
         <h2>Women Topper pieces</h2>
         <p>For clients who need targeted volume or coverage rather than a full extension install, we produce Women Topper units in complementary shades from our 141-colour range. Topper work pairs naturally with our custom colour matching service when a seamless blend with existing hair is essential.</p>
-        <p><a href="/hair-extension-colours/">Colour &amp; matching →</a> · <a href="/hair-extension-weight-guide/">Weight guide →</a></p>
+        <p class="link-group">
+          <a href="/hair-extension-colours/" class="text-link">Colour &amp; matching</a>
+          <span class="link-group__sep" aria-hidden="true">·</span>
+          <a href="/hair-extension-weight-guide/" class="text-link">Weight guide</a>
+        </p>
       </div>
     </div>
   </section>

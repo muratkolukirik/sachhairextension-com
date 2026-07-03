@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTASection from '../../components/CTASection.astro';
 import { SITE } from '../../data/site';
 
 const title = 'Contact';
@@ -11,38 +10,42 @@ const breadcrumbs = [{ label: 'Contact' }];
 ---
 
 <BaseLayout {title} {description} path="/contact/" {breadcrumbs}>
-  <section class="section">
+  <section class="page-intro">
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>Contact Sach &amp; Vogue Hair</h1>
-      <div class="prose">
-        <p>We welcome enquiries from salons, stylists, and professional distributors. For the fastest response, message us on WhatsApp with your extension method, approximate order size, and any colour references. Our team operates from Fethiye / Ölüdeniz and supports clients internationally.</p>
-      </div>
-      <div class="contact-card">
-        <dl>
-          <dt>WhatsApp / Phone</dt>
-          <dd>
-            <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer">{SITE.phone}</a>
-          </dd>
-          <dt>Address</dt>
-          <dd>
-            {SITE.address.street}<br />
-            {SITE.address.city}, {SITE.address.postalCode}<br />
-            {SITE.location}
-          </dd>
-          <dt>Instagram</dt>
-          <dd>
-            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer">@sachhairextensions</a>
-          </dd>
-          <dt>Main website</dt>
-          <dd>
-            <a href={SITE.mainSite} target="_blank" rel="noopener noreferrer">sachhair.com</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="hero__actions" style="margin-top: 2rem;">
-        <a href={SITE.whatsapp} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
-        <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} class="btn btn--outline">Call {SITE.phone}</a>
+      <h1>Contact</h1>
+      <p class="section__lead">
+        Enquiries from salons, stylists, and professional distributors are welcome. We respond via WhatsApp during business hours.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container">
+      <div class="editorial-split">
+        <div class="prose">
+          <p>For the fastest response, message us with your extension method, approximate order size, and any colour references. Our team operates from Fethiye / Ölüdeniz and supports clients internationally.</p>
+          <div class="actions-inline">
+            <a href={SITE.whatsapp} class="btn btn--soft" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} class="btn">Call</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <dl>
+            <dt>WhatsApp / Phone</dt>
+            <dd><a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer">{SITE.phone}</a></dd>
+            <dt>Address</dt>
+            <dd>
+              {SITE.address.street}<br />
+              {SITE.address.city}, {SITE.address.postalCode}<br />
+              {SITE.location}
+            </dd>
+            <dt>Instagram</dt>
+            <dd><a href={SITE.instagram} target="_blank" rel="noopener noreferrer">@sachhairextensions</a></dd>
+            <dt>Main website</dt>
+            <dd><a href={SITE.mainSite} target="_blank" rel="noopener noreferrer">sachhair.com</a></dd>
+          </dl>
+        </div>
       </div>
     </div>
   </section>

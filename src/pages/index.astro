@@ -10,58 +10,85 @@ const description =
 
 <BaseLayout {title} {description} path="/" includeWebsiteSchema>
   <section class="hero">
-    <div class="container hero__inner">
-      <span class="section__eyebrow">Fethiye / Ölüdeniz · Türkiye</span>
-      <h1>Premium human hair extensions, crafted for professional salons</h1>
-      <p class="section__lead">
-        Sach & Vogue Hair is a manufacturer of bulk human hair extension systems — not a reseller. From our studio in Fethiye / Ölüdeniz, we produce Tape-In, Keratin Tip, Weft, and Clip-In extensions for stylists who expect consistent quality, natural movement, and reliable supply.
-      </p>
-      <div class="hero__actions">
-        <a href={SITE.whatsapp} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp our team</a>
-        <a href="/professional-salon-supply/" class="btn btn--outline">Salon supply</a>
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="section__eyebrow">Fethiye / Ölüdeniz · Türkiye</span>
+        <h1>Premium human hair extensions, crafted for professional salons</h1>
+        <p class="section__lead">
+          Sach &amp; Vogue Hair is a manufacturer of bulk human hair extension systems — not a reseller. From our studio on the Aegean coast, we produce Tape-In, Keratin Tip, Weft, and Clip-In extensions for stylists who expect consistent quality and reliable supply.
+        </p>
+        <div class="hero__actions">
+          <a href="/hair-extensions/" class="btn">View collection</a>
+          <a href={SITE.whatsapp} class="btn btn--soft" target="_blank" rel="noopener noreferrer">Contact</a>
+        </div>
       </div>
+      <aside class="hero__aside" aria-label="Manufacturing note">
+        <p class="hero__aside-label">The atelier</p>
+        <p class="hero__aside-text">
+          Every system is produced in-house — from bulk hair selection and weft construction to colour processing and final inspection.
+        </p>
+      </aside>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section__eyebrow">What we manufacture</span>
-      <h2>Extension systems built for salon work</h2>
-      <p class="section__lead">Each category is produced in-house using carefully sourced bulk hair, with attention to cuticle alignment, bond integrity, and shade consistency across orders.</p>
-      <div class="card-grid">
-        {CATEGORIES.map(({ title: catTitle, href, description: catDesc }) => (
-          <article class="card">
-            <h3 class="card__title"><a href={href}>{catTitle}</a></h3>
-            <p class="card__text">{catDesc}</p>
-            <a href={href} class="card__link">Learn more →</a>
+      <div class="section__header">
+        <span class="section__eyebrow">Collection</span>
+        <h2>Extension systems for salon work</h2>
+        <p class="section__lead">
+          Four core manufacturing lines, each developed for professional installation methods and consistent reordering.
+        </p>
+      </div>
+      <div class="catalogue-grid">
+        {CATEGORIES.map(({ title: catTitle, href, description: catDesc }, index) => (
+          <article class="catalogue-card">
+            <span class="catalogue-card__index">{String(index + 1).padStart(2, '0')}</span>
+            <h3 class="catalogue-card__title"><a href={href}>{catTitle}</a></h3>
+            <p class="catalogue-card__text">{catDesc}</p>
+            <a href={href} class="text-link">Discover</a>
           </article>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="section section--beige">
-    <div class="container">
+  <section class="section section--panel">
+    <div class="container editorial-split">
+      <div>
+        <span class="section__eyebrow">Colour</span>
+        <h2>141 shades and custom matching</h2>
+      </div>
       <div class="prose">
-        <span class="section__eyebrow">Colour &amp; toppers</span>
-        <h2>141 shades and custom colour matching</h2>
-        <p>Our colour library spans natural bases, rooted tones, balayage blends, and fashion shades. Stylists can order from the full range or request custom colour matching when a client needs a precise blend. We also manufacture Women Topper pieces for volume and coverage applications where a discreet, natural result matters.</p>
-        <p><a href="/hair-extension-colours/">Explore our colour approach →</a></p>
+        <p>
+          Our colour library spans natural bases, rooted tones, balayage blends, and select fashion shades. Stylists order from the full range or request custom colour matching when a client needs a precise blend.
+        </p>
+        <p>
+          We also manufacture Women Topper pieces for volume and coverage — finished with the same shade discipline applied across every extension line.
+        </p>
+        <a href="/hair-extension-colours/" class="text-link">Colour approach</a>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="prose">
-        <span class="section__eyebrow">International supply</span>
-        <h2>Reliable delivery for professional clients</h2>
-        <p>We ship extension orders internationally via DHL Express, with clear communication on production timelines and dispatch. Whether you operate a single chair or a multi-location salon group, our team supports consistent reordering and category-specific guidance.</p>
+    <div class="container editorial-split">
+      <div>
+        <span class="section__eyebrow">Supply</span>
+        <h2>International delivery for professional clients</h2>
+      </div>
+      <div>
+        <p class="section__lead section__lead--wide">
+          Orders ship internationally via DHL Express, with clear communication on production timelines. We support single-chair studios and multi-location salon groups with consistent batch quality.
+        </p>
         <ul class="feature-list">
-          <li>Manufacturer-direct pricing structure for qualified salon accounts</li>
-          <li>Bulk hair production with batch consistency</li>
-          <li>Technical guidance on weight, length, and method selection</li>
+          <li>Manufacturer-direct supply for qualified salon accounts</li>
+          <li>Bulk hair production with shade and weight consistency</li>
+          <li>Guidance on method, length, and weight selection</li>
         </ul>
+        <p class="link-group">
+          <a href="/professional-salon-supply/" class="text-link">Salon supply</a>
+        </p>
       </div>
     </div>
   </section>
