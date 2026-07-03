@@ -12,10 +12,11 @@ const {
 } = Astro.props;
 ---
 
-<section class="section cta-band">
-  <div class="container">
+<section class="section section--compact cta-band">
+  <div class="container cta-band__inner">
+    <span class="section__eyebrow">Enquiries</span>
     <h2>{heading}</h2>
     <p>{text}</p>
-    <a href={SITE.whatsapp} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+    <a href={SITE.whatsapp} class="btn btn--soft" target="_blank" rel="noopener noreferrer">Contact via WhatsApp</a>
   </div>
 </section>
